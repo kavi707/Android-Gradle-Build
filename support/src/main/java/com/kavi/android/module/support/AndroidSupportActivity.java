@@ -4,9 +4,14 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.kavi.android.module.java.JavaSupport;
+
+import org.w3c.dom.Text;
 
 /**
  * AndroidSupportActivity.java
@@ -15,7 +20,10 @@ import com.kavi.android.module.java.JavaSupport;
  */
 public class AndroidSupportActivity extends Activity {
 
-    private EditText supportText;
+    private EditText supportEditText;
+    private Button squareRootBtn;
+    private TextView rootTextView;
+    private JavaSupport javaSupport;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +34,25 @@ public class AndroidSupportActivity extends Activity {
     }
 
     private void setUpViews() {
-        supportText = (EditText) findViewById(R.id.supportText);
+        supportEditText = (EditText) findViewById(R.id.supportText);
+        squareRootBtn = (Button) findViewById(R.id.sqrtBtn);
+        rootTextView = (TextView) findViewById(R.id.rootTextView);
 
-        JavaSupport javaSupport = new JavaSupport();
+        javaSupport = new JavaSupport();
 
-        String support = javaSupport.supportMethod();
-        supportText.setText(support);
+        String hint = javaSupport.supportMethod();
+        supportEditText.setHint(hint);
+
+        squareRootBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String number = supportEditText.getText().toString();
+                Double doubleNumber = Double.parseDouble(number);
+
+                Double root = javaSupport.getSquareRoot(doubleNumber);
+                rootTextView.setText(root.toString());
+            }
+        });
     }
 
 

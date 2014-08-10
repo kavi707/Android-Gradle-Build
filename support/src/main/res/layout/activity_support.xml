@@ -12,16 +12,37 @@
         android:text="@string/support_welcome_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/textView" />
+        android:id="@+id/textView"
+        android:textSize="24dp"
+        android:layout_marginTop="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:id="@+id/supportText"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Square root"
+        android:id="@+id/sqrtBtn"
+        android:layout_below="@+id/supportText"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="41dp" />
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/rootTextView"
+        android:layout_below="@+id/sqrtBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
 
 </RelativeLayout>

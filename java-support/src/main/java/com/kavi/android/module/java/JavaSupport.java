@@ -1,5 +1,8 @@
 package com.kavi.android.module.java;
 
+import org.apache.commons.math3.analysis.function.Sqrt;
+import org.apache.commons.math3.util.MathUtils;
+
 /**
  * JavaSupport.java
  *
@@ -8,6 +11,15 @@ package com.kavi.android.module.java;
 public class JavaSupport {
 
     public String supportMethod() {
-        return "Set text from JavaSupport module";
+        return "Enter the no. to get square root";
+    }
+
+    public Double getSquareRoot(double number) {
+        Double squareRoot = 0.0;
+
+        Sqrt sqrt = new Sqrt();
+        squareRoot = sqrt.value(number);
+
+        return squareRoot;
     }
 }
