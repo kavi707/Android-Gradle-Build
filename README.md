@@ -21,7 +21,9 @@ These three modules depended as follows
         }
       ```  
        
-    `compile project(':support')` part defines `app` module depend on `support` module 
+    `compile project(':support')` part defines `app` module depend on `support` module   
+    
+     --- 
  
  * `support` module depended on `java-support` module - (support module build.gradle)
 
