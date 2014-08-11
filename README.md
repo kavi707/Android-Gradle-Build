@@ -1,6 +1,7 @@
 # Android build from Gradle build
 This is a example project for android build using gradle build tool. 
-This contain 
+This contain,
+ 
  * How to set file dependencies and module dependencies (android modules, java modules) to the project. 
  * Demonstrate how to use gradle and maven repositories in the project and each module. 
  * What are the gradle tasks and how we can use them.
