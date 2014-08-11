@@ -25,4 +25,5 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile project(':java-support')
+    compile files('libs/gcm.jar')
 }
