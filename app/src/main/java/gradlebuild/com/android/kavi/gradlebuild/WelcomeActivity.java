@@ -3,6 +3,7 @@ package gradlebuild.com.android.kavi.gradlebuild;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,16 +24,18 @@ public class WelcomeActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcom);
-
+        Log.d("app:WelcomeActivity/onCreate", "Method Called");
         setUpViews();
     }
 
     private void setUpViews() {
+        Log.d("app:WelcomeActivity/setUpViews", "Method Called");
         openSupModuleActivityBtn = (Button) findViewById(R.id.button);
 
         openSupModuleActivityBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.d("app:WelcomeActivity/setUpViews", "Opened the AndroidSupportActivity in support module");
                 Intent supIntent = new Intent(WelcomeActivity.this, AndroidSupportActivity.class);
                 startActivity(supIntent);
             }

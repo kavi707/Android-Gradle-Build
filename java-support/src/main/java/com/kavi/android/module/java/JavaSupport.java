@@ -1,7 +1,6 @@
 package com.kavi.android.module.java;
 
 import org.apache.commons.math3.analysis.function.Sqrt;
-import org.apache.commons.math3.util.MathUtils;
 
 /**
  * JavaSupport.java
@@ -10,7 +9,7 @@ import org.apache.commons.math3.util.MathUtils;
  */
 public class JavaSupport {
 
-    public String supportMethod() {
+    public String getHint() {
         return "Enter the no. to get square root";
     }
 
