@@ -13,45 +13,53 @@ These three modules depended as follows
 #### Module dependencies
 
  * `app` module depended on `support` module - (app module build.gradle)
-
-       dependencies {
-        compile fileTree(dir: 'libs', include: ['*.jar'])
-        compile project(':support')
-       }  
+      
+      ``` 
+        dependencies {
+            compile fileTree(dir: 'libs', include: ['*.jar'])
+            compile project(':support')
+        }
+      ```  
        
-   `compile project(':support')` part defines `app` module depend on `support` module 
+    `compile project(':support')` part defines `app` module depend on `support` module 
  
  * `support` module depended on `java-support` module - (support module build.gradle)
 
-       dependencies {
-        compile fileTree(dir: 'libs', include: ['*.jar'])
-        compile project(':java-support')
-       }
+      ```
+        dependencies {
+            compile fileTree(dir: 'libs', include: ['*.jar'])
+            compile project(':java-support')
+        }
+      ``` 
 
-   `compile project(':java-support')` part defines `support` module depend on `java-support` module 
+    `compile project(':java-support')` part defines `support` module depend on `java-support` module 
 
 #### File dependencies
 
  * `support` module use `gcm.jar` as external file dependency (support module build.gradle)
        
-       dependencies {
-        compile fileTree(dir: 'libs', include: ['*.jar'])
-        compile project(':java-support')
-        compile files('libs/gcm.jar')
-       }
+      ```
+        dependencies {
+            compile fileTree(dir: 'libs', include: ['*.jar'])
+            compile project(':java-support')
+            compile files('libs/gcm.jar')
+        }
+      ```
 
-   `compile files('libs/gcm.jar')` part defines `support` module have `gcm.jar` external dependency and its located in module `libs` directory
+    `compile files('libs/gcm.jar')` part defines `support` module have `gcm.jar` external dependency and its located in module `libs` directory
    
 #### Library dependency
 
  * `java-support` module use `maven` library dependency (java-support module build.gradle)
 
-       dependencies {
-        compile fileTree(dir: 'libs', include: ['*.jar'])
-        compile group:'org.apache.commons', name:'commons-math3', version:'3.2'
-       }
+      ```
+        dependencies {
+            compile fileTree(dir: 'libs', include: ['*.jar'])
+            compile group:'org.apache.commons', name:'commons-math3', version:'3.2'
+        }
+      ```
 
-   `compile group:'org.apache.commons', name:'commons-math3', version:'3.2'` part defines `java-support` module use this `apche-commons-math` library as dependency. This library dependency integration is discussed below with furthur details
+    `compile group:'org.apache.commons', name:'commons-math3', version:'3.2'` part defines `java-support` module use this `apche-commons-math` library as dependency. This library dependency integration is discussed below with furthur details
    
 ### Gradle and Maven repository usage
 ### Gradle Tasks
