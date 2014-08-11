@@ -12,7 +12,7 @@ These three modules depended as follows
 
 #### Module dependencies
 
- * `app` module depended on `support` module - (app module build.gradle)
+ * **app** module depended on **support** module - (app module build.gradle)
       
       ``` 
         dependencies {
@@ -21,11 +21,11 @@ These three modules depended as follows
         }
       ```  
        
-    `compile project(':support')` part defines `app` module depend on `support` module   
+    *compile project(':support')* part defines **app** module depend on **support** module   
     
      --- 
  
- * `support` module depended on `java-support` module - (support module build.gradle)
+ * **support** module depended on **java-support** module - (support module build.gradle)
 
       ```
         dependencies {
@@ -34,11 +34,11 @@ These three modules depended as follows
         }
       ``` 
 
-    `compile project(':java-support')` part defines `support` module depend on `java-support` module 
+    *compile project(':java-support')* part defines **support** module depend on **java-support** module 
 
 #### File dependencies
 
- * `support` module use `gcm.jar` as external file dependency (support module build.gradle)
+ * **support** module use **gcm.jar** as external file dependency (support module build.gradle)
        
       ```
         dependencies {
@@ -48,11 +48,11 @@ These three modules depended as follows
         }
       ```
 
-    `compile files('libs/gcm.jar')` part defines `support` module have `gcm.jar` external dependency and its located in module `libs` directory
+    *compile files('libs/gcm.jar')* part defines **support** module have **gcm.jar** external dependency and its located in module `libs` directory
    
 #### Library dependency
 
- * `java-support` module use `maven` library dependency (java-support module build.gradle)
+ * **java-support** module use **maven** library dependency (java-support module build.gradle)
 
       ```
         dependencies {
@@ -61,7 +61,7 @@ These three modules depended as follows
         }
       ```
 
-    `compile group:'org.apache.commons', name:'commons-math3', version:'3.2'` part defines `java-support` module use this `apche-commons-math` library as dependency. This library dependency integration is discussed below with furthur details
+    *compile group:'org.apache.commons', name:'commons-math3', version:'3.2'* part defines **java-support** module use this **apche-commons-math** library as dependency. This library dependency integration is discussed below with further details
    
 ### Gradle and Maven repository usage
 ### Gradle Tasks
