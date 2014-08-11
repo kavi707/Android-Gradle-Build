@@ -2,6 +2,7 @@ package com.kavi.android.module.support;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,8 +11,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.kavi.android.module.java.JavaSupport;
-
-import org.w3c.dom.Text;
 
 /**
  * AndroidSupportActivity.java
@@ -29,18 +28,21 @@ public class AndroidSupportActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_support);
-
+        Log.d("support:AndroidSupportActivity/onCreate", "Method Called");
         setUpViews();
     }
 
     private void setUpViews() {
+        Log.d("support:AndroidSupportActivity/setUpViews", "Method Called");
         supportEditText = (EditText) findViewById(R.id.supportText);
         squareRootBtn = (Button) findViewById(R.id.sqrtBtn);
         rootTextView = (TextView) findViewById(R.id.rootTextView);
 
+        Log.d("support:AndroidSupportActivity/setUpViews", "Create a object to JavaSupport class in java-support module");
         javaSupport = new JavaSupport();
 
-        String hint = javaSupport.supportMethod();
+        Log.d("support:AndroidSupportActivity/setUpViews", "Get the hint from getHint method in java-support module");
+        String hint = javaSupport.getHint();
         supportEditText.setHint(hint);
 
         squareRootBtn.setOnClickListener(new View.OnClickListener() {
@@ -49,6 +51,7 @@ public class AndroidSupportActivity extends Activity {
                 String number = supportEditText.getText().toString();
                 Double doubleNumber = Double.parseDouble(number);
 
+                Log.d("support:AndroidSupportActivity/setUpViews", "Get the SquareRoot from getSquareRoot method in java-support module");
                 Double root = javaSupport.getSquareRoot(doubleNumber);
                 rootTextView.setText(root.toString());
             }
