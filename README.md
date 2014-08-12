@@ -23,7 +23,7 @@ These three modules depended as follows
         }
       ```  
        
-    *compile project(':support')* part defines **app** module depend on **support** module   
+    `compile project(':support')` part defines **app** module depend on **support** module   
     
      --- 
  
@@ -37,7 +37,7 @@ These three modules depended as follows
         }
       ``` 
 
-    *compile project(':java-support')* part defines **support** module depend on **java-support** module 
+    `compile project(':java-support')` part defines **support** module depend on **java-support** module 
 
 #### File dependencies
 
@@ -52,7 +52,7 @@ These three modules depended as follows
         }
       ```
 
-    *compile files('libs/gcm.jar')* part defines **support** module have **gcm.jar** external dependency and its located in module **libs** directory
+    `compile files('libs/gcm.jar')` part defines **support** module have **gcm.jar** external dependency and its located in module **libs** directory
    
 #### Library dependency
 
@@ -66,7 +66,7 @@ These three modules depended as follows
         }
       ```
 
-    *compile group:'org.apache.commons', name:'commons-math3', version:'3.2'* part defines **java-support** module use this **apche-commons-math** library as dependency. This library dependency integration is discussed below with further details
+    `compile group:'org.apache.commons', name:'commons-math3', version:'3.2'` part defines **java-support** module use this **apche-commons-math** library as dependency. This library dependency integration is discussed below with further details
    
 ### Gradle and Maven repository usage
 ### Gradle Tasks
