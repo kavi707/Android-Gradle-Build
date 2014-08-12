@@ -29,7 +29,6 @@ These three modules depended as follows
  * **support** module depended on **java-support** module - (support module build.gradle)
 
       ```
-      #!
 
         dependencies {
             compile fileTree(dir: 'libs', include: ['*.jar'])
