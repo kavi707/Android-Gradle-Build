@@ -16,6 +16,7 @@ These three modules depended as follows
  * **app** module depended on **support** module - (app module build.gradle)
       
       ```
+
         dependencies {
             compile fileTree(dir: 'libs', include: ['*.jar'])
             compile project(':support')
@@ -43,6 +44,7 @@ These three modules depended as follows
  * **support** module use **gcm.jar** as external file dependency (support module build.gradle)
        
       ```
+
         dependencies {
             compile fileTree(dir: 'libs', include: ['*.jar'])
             compile project(':java-support')
@@ -57,6 +59,7 @@ These three modules depended as follows
  * **java-support** module use **maven** library dependency (java-support module build.gradle)
 
       ```
+
         dependencies {
             compile fileTree(dir: 'libs', include: ['*.jar'])
             compile group:'org.apache.commons', name:'commons-math3', version:'3.2'
