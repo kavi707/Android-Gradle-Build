@@ -15,7 +15,7 @@ These three modules depended as follows
 
  * **app** module depended on **support** module - (app module build.gradle)
       
-      ``` 
+      ```
         dependencies {
             compile fileTree(dir: 'libs', include: ['*.jar'])
             compile project(':support')
@@ -29,6 +29,8 @@ These three modules depended as follows
  * **support** module depended on **java-support** module - (support module build.gradle)
 
       ```
+      #!python
+
         dependencies {
             compile fileTree(dir: 'libs', include: ['*.jar'])
             compile project(':java-support')
@@ -49,7 +51,7 @@ These three modules depended as follows
         }
       ```
 
-    *compile files('libs/gcm.jar')* part defines **support** module have **gcm.jar** external dependency and its located in module `libs` directory
+    *compile files('libs/gcm.jar')* part defines **support** module have **gcm.jar** external dependency and its located in module **libs** directory
    
 #### Library dependency
 
