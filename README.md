@@ -69,4 +69,38 @@ These three modules depended as follows
     `compile group:'org.apache.commons', name:'commons-math3', version:'3.2'` part defines **java-support** module use this **apche-commons-math** library as dependency. This library dependency integration is discussed below with further details
    
 ### Gradle and Maven repository usage
+
+In Gradle we can use maven repositories as for dependency downloading. In this sample project java-support module shows how we can do it.
+
+ * In Maven
+
+      ```
+
+        <dependency>
+	      <groupId>org.apache.commons</groupId>
+	      <artifactId>commons-math3</artifactId>
+	      <version>3.2</version>
+        </dependency>
+
+      ```
+ 
+ * In Gradle
+
+      ```
+
+        dependencies {
+            compile fileTree(dir: 'libs', include: ['*.jar'])
+            compile group:'org.apache.commons', name:'commons-math3', version:'3.2'
+        }
+
+      ```
+
+Above two code blocks show how we defines a dependency in maven and gradle. So you can clearly see that, we need to configure same parameters as follows
+
+Maven       | Gradle
+----------- | -----------
+groupId     | group
+artifactId  | name
+version     | version
+
 ### Gradle Tasks
