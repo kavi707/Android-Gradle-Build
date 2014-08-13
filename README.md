@@ -134,3 +134,63 @@ artifactId  | name
 version     | version
 
 ### Gradle Tasks
+
+In gradle have tasks to execute. `gradle clean`, `gradle build`, `gradle installDebug`, etc ... are some pre-defined tasks in gradle. At the beginning we used `clean` & `build` tasks to build the sample project.
+
+#### Sample gradle pre-defined tasks we can use
+
+ * All available pre-defined tasks
+
+    > `gradle tasks`
+
+ * Build and install android app in device
+
+    > `gradle installDebug`
+
+#### Define our own tasks in 'gradle.build'
+
+Just copy the each following task and paste them into your gradle.build file. Then check how they are run and execute.
+
+ * Simple task
+
+     ```
+
+        task taskX << {
+            println 'taskX'
+        }
+
+        to run above task: gradle -q taskX
+     ```
+
+ * Dependency tasks
+
+     ```
+
+        task taskX << {
+            println 'taskX'
+        }
+
+        task taskY << {
+           println 'taskY'
+        }
+
+        taskX.dependsOn taskY
+
+        gradle -q taskX
+     ```
+
+     or
+
+     ```
+
+        task taskY << {
+          println 'taskY'
+        }
+
+        task taskX(dependsOn: [taskY]) << {
+         println 'taskX'
+        }
+
+        gradle -q taskX
+
+     ```
