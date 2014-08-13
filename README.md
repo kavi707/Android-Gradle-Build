@@ -6,6 +6,36 @@ This contain,
  * Demonstrate how to use gradle and maven repositories in the project and each module. 
  * What are the gradle tasks and how we can use them.
 
+### Gradle installation
+
+ 1. Download the gradle from here (for this sample project using gradle 1.12)
+
+     > http://www.gradle.org/downloads
+
+ 2. Extract the gradle.tar.gz file to your preferred location and set PATH to GRADLE_HOME 
+
+### Build the sample project
+
+ 1. Clone the project
+  
+     > git clone https://kavi707@bitbucket.org/kavi707/android-gradle-build.git
+
+ 2. Clean and build the project
+
+     > #### (If you installed gradle)
+     > 
+     > ./gradle clean
+     >
+     > ./gradle build
+
+     > ---
+
+     > #### (If you don't install gradle)
+     > 
+     > ./gradlew clean
+     >
+     > ./gradlew build
+
 ### Project dependencies 
  In a project we can define three type of dependencies, Module dependencies, file dependencies and Library dependencies. In this sample project you can see
 there are separate modules as Android application module (app), Android library module (support) and Java library module (java-support). 
